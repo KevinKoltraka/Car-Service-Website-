@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - Vintage Car Service</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="https://as2.ftcdn.net/v2/jpg/05/31/04/89/1000_F_531048984_vpZFc9FaX2dKfRxes2mGyQbPMtx5JwdT.jpg" alt="Vintage Car Service Logo" class="logo">
+            </a>  
+            <nav class="nav-container">
+                <ul>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing Plans</a></li>
+                    <li><a href="insurance.html">Insurance</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="login.html" class="login-button">Log In</a>
+        </div>
+    </header>
+    <main>
+        <section class="signup-section">
+            <div class="signup-container">
+                <h1>Sign Up</h1>
+                <form action="signup_action.php" method="post">
+                    <label for="fullname">Full Name *</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit" class="signup-button">Sign Up</button>
+                    <p class="login-link">Already have an account? <a href="login.html">Log In</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Vintage Car Service. All rights reserved.</p>
+    </footer>
+</body>
+</html>

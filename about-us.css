@@ -1,0 +1,221 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0); /* Subtle gradient background */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #333, #555); /* Gradient background */
+    color: #fff;
+    padding: 20px 0; /* Increased padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px; /* Increased padding */
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Logo scale effect */
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-container li {
+    margin-right: 20px;
+}
+
+.nav-container a {
+    color: #fff;
+    font-size: 30px; /* Adjusted font size */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding: 5px;
+}
+
+.nav-container a:hover {
+    color: #ffd700; /* Gold color on hover */
+    border-bottom: 2px solid #ffd700; /* Underline effect */
+}
+
+.login-button {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 16px;
+}
+
+.login-button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d79); /* Darker gradient on hover */
+    transform: scale(1.05); /* Button scale effect */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 1200px; /* Limit width for large screens */
+    margin: auto;
+}
+
+/* About Us Section Styles */
+.about-us-section {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.about-us-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+.about-us-section h2 {
+    font-size: 1.8em;
+    margin-top: 20px;
+    color: #333;
+    border-bottom: 2px solid #007bff; /* Underline for section titles */
+    padding-bottom: 5px;
+}
+
+.about-us-section p {
+    margin-bottom: 20px;
+    font-size: 1.1em; /* Slightly larger font size for readability */
+}
+
+.about-us-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-us-section ul li {
+    background: url('checkmark.png') no-repeat left center;
+    background-size: 20px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 1.1em; /* Adjusted font size */
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #333, #555); /* Gradient background */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0; /* Increased padding */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .header-container {
+        gap: 30px;
+    }
+
+    .nav-container ul li a {
+        font-size: 28px;
+    }
+
+    .login-button {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-container ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-container ul li a {
+        font-size: 24px;
+    }
+
+    .login-button {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .header-container {
+        gap: 20px;
+    }
+
+    .nav-container ul li a {
+        font-size: 22px;
+    }
+
+    .login-button {
+        font-size: 18px;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        width: 150px;
+    }
+
+    .nav-container ul li a {
+        font-size: 20px;
+    }
+
+    .login-button {
+        font-size: 16px;
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav-container ul li a {
+        font-size: 18px;
+    }
+
+    .login-button {
+        font-size: 14px;
+        padding: 4px 6px;
+    }
+}

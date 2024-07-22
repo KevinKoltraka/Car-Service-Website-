@@ -1,0 +1,246 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0); /* Subtle gradient background */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #333, #555); /* Gradient background */
+    color: #fff;
+    padding: 20px 0; /* Increased padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px; /* Increased padding */
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Logo scale effect */
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-container li {
+    margin-right: 20px;
+}
+
+.nav-container a {
+    color: #fff;
+    font-size: 30px; /* Adjusted font size */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding: 5px;
+}
+
+.nav-container a:hover {
+    color: #ffd700; /* Gold color on hover */
+    border-bottom: 2px solid #ffd700; /* Underline effect */
+}
+
+.login-button {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 16px;
+}
+
+.login-button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d79); /* Darker gradient on hover */
+    transform: scale(1.05); /* Button scale effect */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 1200px; /* Limit width for large screens */
+    margin: auto;
+}
+
+/* Insurance Partners Section Styles */
+.insurance-partners {
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.insurance-partners h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center; /* Center-align heading */
+}
+
+.insurance-partners p {
+    margin-bottom: 20px;
+    font-size: 1.1em; /* Slightly larger font size for readability */
+    text-align: center; /* Center-align paragraph text */
+}
+
+.partner-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between partner items */
+    justify-content: center; /* Center-align partner items */
+}
+
+.partner {
+    flex: 1 1 calc(33.333% - 40px); /* Responsive layout for three items per row */
+    box-sizing: border-box;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for individual partner items */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.partner:hover {
+    transform: scale(1.02); /* Scale effect on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.partner img {
+    width: 200px; /* Fixed size for partner logos */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.partner h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #007bff;
+}
+
+.partner p {
+    font-size: 1em;
+    color: #000000;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #333, #555); /* Gradient background */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0; /* Increased padding */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .partner {
+        flex: 1 1 100%; /* Stack items vertically on small screens */
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .header-container {
+        gap: 30px;
+    }
+
+    .nav-container ul li a {
+        font-size: 28px;
+    }
+
+    .login-button {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-container ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-container ul li a {
+        font-size: 24px;
+    }
+
+    .login-button {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .header-container {
+        gap: 20px;
+    }
+
+    .nav-container ul li a {
+        font-size: 22px;
+    }
+
+    .login-button {
+        font-size: 18px;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        width: 150px;
+    }
+
+    .nav-container ul li a {
+        font-size: 20px;
+    }
+
+    .login-button {
+        font-size: 16px;
+        padding: 6px 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav-container ul li a {
+        font-size: 18px;
+    }
+
+    .login-button {
+        font-size: 14px;
+        padding: 4px 6px;
+    }
+}
