@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In - Vintage Car Service</title>
-    <link rel="stylesheet" href="login.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="google-signin-client_id" content="191619700873-peg0pbkptuh8s25ap6qjbdel7i3ota1i.apps.googleusercontent.com">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+            rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title>Log In - Vintage Car Service</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
 <body>
     <header>
         <div class="header-container">
             <a href="index.html">
                 <img src="https://as2.ftcdn.net/v2/jpg/05/31/04/89/1000_F_531048984_vpZFc9FaX2dKfRxes2mGyQbPMtx5JwdT.jpg" alt="Vintage Car Service Logo" class="logo">
-            </a>  
+            </a>
             <nav class="nav-container">
                 <ul>
                     <li><a href="about-us.html">About Us</a></li>
@@ -25,22 +28,55 @@
         </div>
     </header>
     <main>
-        <section class="login-section">
-            <div class="login-container">
+        <section id="login-container">
+            <div>
                 <h1>Log In</h1>
                 <form action="login_action.php" method="post">
-                    <label for="username">Username *</label>
-                    <input type="text" id="username" name="username" required>
-                    <label for="password">Password *</label>
-                    <input type="password" id="password" name="password" required>
-                    <button type="submit" class="login-button">Log In</button>
-                    <p class="signup-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+                    <label for="login-username">Username *</label>
+                    <input type="text" id="login-username" name="username" required>
+                    <label for="login-password">Password *</label>
+                    <input type="password" id="login-password" name="password" required>
+                    <button type="submit">Log In</button>
                 </form>
+                <!-- Google Sign-In Button -->
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                <div class="data">
+                    <p>Name</p>
+                    <p id="name" class="alet alert-success"></p>
+                    <p>Profile Pic</p>
+                    <img id="image" class="rounded-circle" width="100" height="100" />
+                    <p>Email</p>
+                    <p id="email"></p>
+                    <button type="button" class="btn btn-danger" onclick="signOut();">Sign Out</button>
+                </div>
+            </div>
+        </section>
+        <section id="signup-container">
+            <div>
+                <h1>Sign Up</h1>
+                <form action="signup_action.php" method="post">
+                    <label for="signup-fullname">Full Name *</label>
+                    <input type="text" id="signup-fullname" name="fullname" required>
+                    <label for="signup-email">Email *</label>
+                    <input type="email" id="signup-email" name="email" required>
+                    <label for="signup-username">Username *</label>
+                    <input type="text" id="signup-username" name="username" required>
+                    <label for="signup-password">Password *</label>
+                    <input type="password" id="signup-password" name="password" required>
+                    <button type="submit">Sign Up</button>
+                </form>                
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Vintage Car Service. All rights reserved.</p>
     </footer>
+    <!-- JavaScript and API Libraries -->
+    <script src="script.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 </html>
