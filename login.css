@@ -199,6 +199,21 @@ footer {
     margin-top: 15px;
 }
 
+/* Style for toggle link */
+.toggle-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.toggle-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.toggle-link a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;

@@ -78,22 +78,19 @@ document.querySelector('#signup-container form').addEventListener('submit', func
 
 // Initialize the Google Sign-In API
 function onSignIn(googleUser) {
-    // Get the Google User profile
+    // Get user profile information
     var profile = googleUser.getBasicProfile();
     document.getElementById('name').textContent = profile.getName();
     document.getElementById('email').textContent = profile.getEmail();
     document.getElementById('image').src = profile.getImageUrl();
-
-    // Show the user data section
-    document.querySelector('.data').style.display = 'block';
+    document.querySelector('.data').style.display = 'block'; // Show user data section
 }
 
-// Handle Sign Out
 function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
         console.log('User signed out.');
-        // Hide the user data section
-        document.querySelector('.data').style.display = 'none';
+        document.querySelector('.data').style.display = 'none'; // Hide user data section
     });
 }
+
